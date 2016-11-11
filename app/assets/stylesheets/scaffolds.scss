@@ -1,0 +1,179 @@
+body {
+  background-color: #000;
+  color: #CCC;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0px;
+  width: 100%;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #ccc;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #000;
+    background-color: #fff;
+  }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  vertical-align: center;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+
+.key {
+  background-color: #ffb;
+  border: solid 1px #bb9;
+  border-radius: 5px;
+  font-size: smaller;
+  font-weight: bold;
+  padding: 0px 2px;
+  color: #000;
+}
+
+.align-right {
+  text-align: right;
+}
+
+tr:nth-child(odd) {background: #222}
+tr:nth-child(even) {background: #000}
+
+table {
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+button.selected {
+  background-color: #ff0;
+  background: linear-gradient(to bottom, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+button, input[type="submit"] {
+  background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+  border: outset 1px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 0px;
+}
+
+button:active, input[type="submit"]:active {
+  border: inset 1px;
+  background: linear-gradient(to bottom, rgba(248,248,248,1) 0%,rgba(214,214,214,1) 100%);
+}
+
+.setRating {
+  height: 36px;
+}
+.setRating:nth-child(odd) {  width: 26px; }
+.setRating:nth-child(even) { width: 40px; }
+
+.setPrio {
+  height: 36px;
+  width: 48px;
+}
+
+.setKey {
+  height: 36px;
+  width: 31px;
+}
+
+.setKey[data-key="0"] {
+  width: 46px;
+}
+
+input[type="submit"] {
+  width: 96px;
+  height: 36px;
+  border-radius: 0;
+}
+
+.buttonContainer {
+  font-size: 5px;
+}
+
+input[type="text"] {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+  border: 0px black solid;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+
+}
+
+

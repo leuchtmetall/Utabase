@@ -1,0 +1,71 @@
+<%= form_for(song) do |f| %>
+  <% if song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(song.errors.count, "error") %> prohibited this song from being saved:</h2>
+
+      <ul>
+      <% song.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :artist %>
+    <%= f.text_field :artist %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :key %>
+    <%= f.hidden_field :key %>
+    <div class="buttonContainer">
+      <% (-5..5).each do |key| %>
+        <button type="button" class="setKey" data-key="<%=key %>"><%=key %></button>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.hidden_field :rating %>
+    <div class="buttonContainer">
+      <button type="button" class="setRating" data-rating="1">　</button>
+      <button type="button" class="setRating" data-rating="2">⭐️</button>
+      <button type="button" class="setRating" data-rating="3">　</button>
+      <button type="button" class="setRating" data-rating="4">⭐️</button>
+      <button type="button" class="setRating" data-rating="5">　</button>
+      <button type="button" class="setRating" data-rating="6">⭐️</button>
+      <button type="button" class="setRating" data-rating="7">　</button>
+      <button type="button" class="setRating" data-rating="8">⭐️</button>
+      <button type="button" class="setRating" data-rating="9">　</button>
+      <button type="button" class="setRating" data-rating="10">⭐️</button>
+      <button type="button" class="setRating" data-rating="11">　</button>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :priority %>
+    <%= f.hidden_field :priority %>
+      <div class="buttonContainer">
+      <% [0, 1, 2, 3].each do |prio| %>
+        <button type="button" class="setPrio" data-prio="<%=prio %>"><%=prio %></button>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>歌ベース</h1>
+<%= link_to 'Add Song', new_song_path %>
+
+<% if user_signed_in? %>
+  | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+<% end %>
+
+
+<table>
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td>
+          <%= song.artist %> - <%= song.title %>
+          <% if song.comment.present? %>
+            <br /><span style="font-size: smaller"><%= song.comment %></span>
+          <% end %>
+        </td>
+        <td class="align-right">
+          <% if song.key.present? && song.key != 0 %>
+            <div class="key"><%= song.key %></div>
+          <% end %>
+        </td>
+        <td><%= rating_stars(song.rating) %></td>
+        <td>
+          <% if song.priority.present? && song.priority != 0 %>
+            <%= song.priority %>
+          <% end %>
+        </td>
+        
+        <td><%= link_to 'Edit', edit_song_path(song) %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
